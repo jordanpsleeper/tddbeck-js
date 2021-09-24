@@ -11,7 +11,7 @@
 // 5 CHF * 2 = 10 CHF (done)
 // dollar/franc duplication
 // common euqal (done)
-// common times
+// common times (done)
 // compare francs with dollars (done)
 // currency? (done)
 // delete multiplicationFranc
