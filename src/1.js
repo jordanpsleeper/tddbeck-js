@@ -1,16 +1,16 @@
 class Money {
-  amount;
-  constructor(amount) {
+  constructor(amount, currency) {
     this.amount = amount;
+    this._currency = currency;
   }
 
   // factory method
   static dollar(amount) {
-    return new Dollar(amount);
+    return new Dollar(amount, "USD");
   }
 
   static franc(amount) {
-    return new Franc(amount);
+    return new Franc(amount, "CHF");
   }
 
   equals(money) {
@@ -19,25 +19,21 @@ class Money {
       this.amount === money.amount && this.constructor === money.constructor
     );
   }
+
+  currency() {
+    return this._currency;
+  }
 }
 
 class Dollar extends Money {
   times(multiplier) {
-    return new Money(this.amount * multiplier);
-  }
-
-  currency() {
-    return "USD";
+    return new Money(this.amount * multiplier, "USD");
   }
 }
 
 class Franc extends Money {
   times(multiplier) {
-    return new Money(this.amount * multiplier);
-  }
-
-  currency() {
-    return "CHF";
+    return new Money(this.amount * multiplier, "CHF");
   }
 }
 
