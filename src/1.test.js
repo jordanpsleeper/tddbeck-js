@@ -6,6 +6,8 @@
 // money rounding?
 // equals() (done)
 // hashCode()
+// equal null
+// equal object
 
 const Dollar = require("./1.js");
 
