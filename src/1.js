@@ -1,5 +1,5 @@
 class Dollar {
-  amount = 0;
+  amount = 10;
   times(multiplier) {}
 }
 
