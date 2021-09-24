@@ -2,7 +2,7 @@
 // $5 + 10 CHF = $10 if rate is 2:1
 // $5 * 2 = $10 (done)
 // make "amount" private
-// dollar side-effects? <--
+// dollar side-effects? (done)
 // money rounding?
 
 const Dollar = require("./1.js");
