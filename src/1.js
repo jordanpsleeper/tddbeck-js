@@ -27,13 +27,13 @@ class Money {
 
 class Dollar extends Money {
   times(multiplier) {
-    return new Dollar(this.amount * multiplier, this._currency);
+    return new Money(this.amount * multiplier, this._currency);
   }
 }
 
 class Franc extends Money {
   times(multiplier) {
-    return new Franc(this.amount * multiplier, this._currency);
+    return new Money(this.amount * multiplier, this._currency);
   }
 }
 
