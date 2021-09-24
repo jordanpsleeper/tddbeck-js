@@ -6,11 +6,11 @@ class Money {
 
   // factory method
   static dollar(amount) {
-    return new Dollar(amount, "USD");
+    return new Money(amount, "USD");
   }
 
   static franc(amount) {
-    return new Franc(amount, "CHF");
+    return new Money(amount, "CHF");
   }
 
   times(multiplier) {
@@ -22,8 +22,4 @@ class Money {
   }
 }
 
-class Dollar extends Money {}
-
-class Franc extends Money {}
-
-module.exports = { Dollar, Franc, Money };
+module.exports = { Money };
