@@ -4,7 +4,8 @@
 // make "amount" private
 // dollar side-effects? (done)
 // money rounding?
-// equals()
+// equals() <--
+// hashCode()
 
 const Dollar = require("./1.js");
 
