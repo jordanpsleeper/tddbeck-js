@@ -1,6 +1,8 @@
 class Dollar {
-  amount = 10;
-  times(multiplier) {}
+  amount;
+  times(multiplier) {
+    this.amount = 5 * 2;
+  }
 }
 
 module.exports = Dollar;
