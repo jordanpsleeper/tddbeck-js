@@ -4,8 +4,8 @@ class Money {
     this.amount = amount;
   }
 
-  static dollar(amt) {
-    return new Dollar(amt);
+  static dollar(amount) {
+    return new Dollar(amount);
   }
 
   equals(money) {
