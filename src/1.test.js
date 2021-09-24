@@ -14,7 +14,7 @@
 // common times (done)
 // compare francs with dollars (done)
 // currency? (done)
-// delete multiplicationFranc
+// delete multiplicationFranc (done)
 
 const { Money } = require("./1.js");
 
