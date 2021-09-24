@@ -20,8 +20,8 @@ class Franc extends Money {
     return new Money(this.amount * multiplier);
   }
 
-  equals(franc) {
-    return this.amount === franc.amount;
+  equals(money) {
+    return this.amount === money.amount;
   }
 }
 
