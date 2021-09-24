@@ -13,8 +13,8 @@ class Money {
     return new Franc(amount, "CHF");
   }
 
-  times(amount) {
-    return null;
+  times(multiplier) {
+    return new Money(this.amount * multiplier, this._currency);
   }
 
   equals(money) {
@@ -26,16 +26,8 @@ class Money {
   }
 }
 
-class Dollar extends Money {
-  times(multiplier) {
-    return new Money(this.amount * multiplier, this._currency);
-  }
-}
+class Dollar extends Money {}
 
-class Franc extends Money {
-  times(multiplier) {
-    return new Money(this.amount * multiplier, this._currency);
-  }
-}
+class Franc extends Money {}
 
 module.exports = { Dollar, Franc, Money };
