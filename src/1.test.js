@@ -12,7 +12,8 @@
 // dollar/franc duplication
 // common euqal (done)
 // common times
-// compare francs with dollars
+// compare francs with dollars (done)
+// currency?
 
 const { Dollar, Franc } = require("./1.js");
 
