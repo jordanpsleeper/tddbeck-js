@@ -13,11 +13,12 @@ class Money {
     return new Franc(amount, "CHF");
   }
 
+  times(amount) {
+    return null;
+  }
+
   equals(money) {
-    return (
-      // compare constructors as you can't use prototypes on right hand of instanceof
-      this.amount === money.amount && this.constructor === money.constructor
-    );
+    return this.amount === money.amount && this._currency === money._currency;
   }
 
   currency() {

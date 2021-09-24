@@ -16,7 +16,7 @@
 // currency? (done)
 // delete multiplicationFranc
 
-const { Money } = require("./1.js");
+const { Money, Franc } = require("./1.js");
 
 test("multiplication", async () => {
   const five = Money.dollar(5);
@@ -41,4 +41,8 @@ test("multiplicationFranc", async () => {
 test("currency", async () => {
   expect(Money.dollar(1).currency()).toEqual("USD");
   expect(Money.franc(1).currency()).toEqual("CHF");
+});
+
+test("test different class equality", async () => {
+  expect(new Money(10, "CHF").equals(new Franc(10, "CHF"))).toEqual(true);
 });
