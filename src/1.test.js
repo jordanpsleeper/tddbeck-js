@@ -10,7 +10,7 @@
 // equal object
 // 5 CHF * 2 = 10 CHF (done)
 // dollar/franc duplication
-// common euqal <--
+// common euqal (done)
 // common times
 
 const { Dollar, Franc } = require("./1.js");
