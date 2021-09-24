@@ -13,7 +13,7 @@
 // common euqal (done)
 // common times
 // compare francs with dollars (done)
-// currency?
+// currency? (done)
 // delete multiplicationFranc
 
 const { Money } = require("./1.js");
