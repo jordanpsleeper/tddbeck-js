@@ -7,7 +7,7 @@ class Money {
 
 class Dollar extends Money {
   times(multiplier) {
-    return new Dollar(this.amount * multiplier);
+    return new Money(this.amount * multiplier);
   }
 
   equals(dollar) {
@@ -17,7 +17,7 @@ class Dollar extends Money {
 
 class Franc extends Money {
   times(multiplier) {
-    return new Franc(this.amount * multiplier);
+    return new Money(this.amount * multiplier);
   }
 
   equals(franc) {
