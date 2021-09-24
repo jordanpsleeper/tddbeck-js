@@ -7,7 +7,7 @@ class Money {
   equals(money) {
     return (
       // compare constructors as you can use prototypes on right hand of instanceof
-      this.amount === money.amount && this.constructor == money.constructor
+      this.amount === money.amount && this.constructor === money.constructor
     );
   }
 }
