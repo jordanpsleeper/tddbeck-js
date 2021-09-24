@@ -3,25 +3,21 @@ class Money {
   constructor(amount) {
     this.amount = amount;
   }
+
+  equals(money) {
+    return this.amount === money.amount;
+  }
 }
 
 class Dollar extends Money {
   times(multiplier) {
     return new Money(this.amount * multiplier);
   }
-
-  equals(money) {
-    return this.amount === money.amount;
-  }
 }
 
 class Franc extends Money {
   times(multiplier) {
     return new Money(this.amount * multiplier);
-  }
-
-  equals(money) {
-    return this.amount === money.amount;
   }
 }
 
