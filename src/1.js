@@ -15,12 +15,7 @@ class Dollar extends Money {
   }
 }
 
-class Franc {
-  amount;
-  constructor(amount) {
-    this.amount = amount;
-  }
-
+class Franc extends Money {
   times(multiplier) {
     return new Franc(this.amount * multiplier);
   }
