@@ -39,8 +39,8 @@ test("multiplicationFranc", async () => {
 });
 
 test("currency", async () => {
-  expect(Money.dollar(1).currency()).toEqual("USD");
-  expect(Money.franc(1).currency()).toEqual("CHF");
+  expect(Money.dollar(1).currency).toEqual("USD");
+  expect(Money.franc(1).currency).toEqual("CHF");
 });
 
 test("test different class equality", async () => {

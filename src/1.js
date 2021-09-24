@@ -1,7 +1,7 @@
 class Money {
   constructor(amount, currency) {
     this.amount = amount;
-    this._currency = currency;
+    this.currency = currency;
   }
 
   // factory method
@@ -14,15 +14,11 @@ class Money {
   }
 
   times(multiplier) {
-    return new Money(this.amount * multiplier, this._currency);
+    return new Money(this.amount * multiplier, this.currency);
   }
 
   equals(money) {
-    return this.amount === money.amount && this._currency === money._currency;
-  }
-
-  currency() {
-    return this._currency;
+    return this.amount === money.amount && this.currency === money.currency;
   }
 }
 
