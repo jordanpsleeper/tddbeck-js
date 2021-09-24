@@ -9,7 +9,7 @@
 // equal null
 // equal object
 
-const Dollar = require("./1.js");
+const { Dollar, Franc } = require("./1.js");
 
 test("multiplication", async () => {
   const five = new Dollar(5);
@@ -20,4 +20,10 @@ test("multiplication", async () => {
 test("equality", async () => {
   expect(new Dollar(5).equals(new Dollar(5))).toEqual(true);
   expect(new Dollar(5).equals(new Dollar(6))).toEqual(false);
+});
+
+test("multiplicationFranc", async () => {
+  const five = new Franc(5);
+  expect(new Franc(10)).toEqual(five.times(2));
+  expect(new Franc(15)).toEqual(five.times(3));
 });
