@@ -15,10 +15,10 @@
 // compare francs with dollars (done)
 // currency?
 
-const { Dollar, Franc } = require("./1.js");
+const { Dollar, Franc, Money } = require("./1.js");
 
 test("multiplication", async () => {
-  const five = new Dollar(5);
+  const five = Money.dollar(5);
   expect(new Dollar(10)).toEqual(five.times(2));
   expect(new Dollar(15)).toEqual(five.times(3));
 });

@@ -4,6 +4,10 @@ class Money {
     this.amount = amount;
   }
 
+  static dollar(amt) {
+    return new Dollar(amt);
+  }
+
   equals(money) {
     return (
       // compare constructors as you can't use prototypes on right hand of instanceof
@@ -24,4 +28,4 @@ class Franc extends Money {
   }
 }
 
-module.exports = { Dollar, Franc };
+module.exports = { Dollar, Franc, Money };
