@@ -4,6 +4,7 @@ class Money {
     this.amount = amount;
   }
 
+  // factory method
   static dollar(amount) {
     return new Dollar(amount);
   }
