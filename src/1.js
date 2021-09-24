@@ -3,7 +3,9 @@ class Money {
   constructor(amount) {
     this.amount = amount;
   }
+}
 
+class Dollar extends Money {
   times(multiplier) {
     return new Dollar(this.amount * multiplier);
   }
@@ -13,8 +15,19 @@ class Money {
   }
 }
 
-class Dollar extends Money {}
+class Franc {
+  amount;
+  constructor(amount) {
+    this.amount = amount;
+  }
 
-class Franc extends Money {}
+  times(multiplier) {
+    return new Franc(this.amount * multiplier);
+  }
+
+  equals(franc) {
+    return this.amount === franc.amount;
+  }
+}
 
 module.exports = { Dollar, Franc };
