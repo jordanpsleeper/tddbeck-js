@@ -10,8 +10,8 @@ class Dollar extends Money {
     return new Money(this.amount * multiplier);
   }
 
-  equals(dollar) {
-    return this.amount === dollar.amount;
+  equals(money) {
+    return this.amount === money.amount;
   }
 }
 
