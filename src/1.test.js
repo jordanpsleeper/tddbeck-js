@@ -84,3 +84,12 @@ test("reduce money into different currency", async () => {
 test("idenity rate", async () => {
   expect(new Bank().rate("USD", "USD")).toEqual(1);
 });
+
+test("mixed addition", async () => {
+  const fiveBucks = Money.dollar(5);
+  const tenFrancs = Money.franc(10);
+  const bank = new Bank();
+  bank.addRate("CHF", "USD", 2);
+  const result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
+  expect(result).toEqual(Money.dollar(10));
+});
