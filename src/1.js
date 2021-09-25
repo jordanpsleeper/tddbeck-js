@@ -26,14 +26,23 @@ class Money {
     return new Sum(this, addend);
   }
 
-  reduce(to) {
-    return this;
+  reduce(bank, to) {
+    const rate = this.currency === "CHF" && to === "USD" ? 2 : 1;
+    return new Money(this.amount / rate, to);
   }
 }
 
 class Bank {
   reduce(source, to) {
-    return source.reduce(to); // can be Money or Sum Expression
+    return source.reduce(this, to); // can be Money or Sum Expression
+  }
+
+  addRate() {
+    return null;
+  }
+
+  rate(from, to) {
+    return from === "CHF" && to === "USD" ? 2 : 1;
   }
 }
 
@@ -44,7 +53,7 @@ class Sum {
     this.addend = addend;
   }
 
-  reduce(to) {
+  reduce(bank, to) {
     const amount = this.augend.amount + this.addend.amount;
     return new Money(amount, to);
   }
