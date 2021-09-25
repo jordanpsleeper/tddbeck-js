@@ -20,6 +20,10 @@ class Money {
   equals(money) {
     return this.amount === money.amount && this.currency === money.currency;
   }
+
+  plus(addend) {
+    return new Money(this.amount + addend.amount, this.currency);
+  }
 }
 
 module.exports = { Money };

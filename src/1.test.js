@@ -15,6 +15,7 @@
 // compare francs with dollars (done)
 // currency? (done)
 // delete multiplicationFranc (done)
+// $5 + $5 = $10
 
 const { Money } = require("./1.js");
 
@@ -37,4 +38,9 @@ test("currency", async () => {
 
 test("test different class equality", async () => {
   expect(new Money(10, "CHF").equals(Money.franc(10, "CHF"))).toEqual(true);
+});
+
+test("addition", async () => {
+  const sum = Money.dollar(5).plus(Money.dollar(5));
+  expect(sum).toEqual(Money.dollar(10));
 });
