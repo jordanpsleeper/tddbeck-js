@@ -67,6 +67,13 @@ class Sum {
   plus(addend) {
     return new Sum(this, addend);
   }
+
+  times(multiplier) {
+    return new Sum(
+      this.augend.times(multiplier),
+      this.addend.times(multiplier)
+    );
+  }
 }
 
 // private class
