@@ -48,3 +48,11 @@ test("addition", async () => {
 
   expect(reduced).toEqual(Money.dollar(10));
 });
+
+test("plus returns sum expression", async () => {
+  const five = Money.dollar(5);
+  const result = five.plus(five);
+  const sum = result;
+  expect(five).toEqual(sum.augend);
+  expect(five).toEqual(sum.addend);
+});

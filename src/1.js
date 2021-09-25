@@ -23,13 +23,21 @@ class Money {
 
   // needs to return an expression
   plus(addend) {
-    return new Money(this.amount + addend.amount, this.currency);
+    return new Sum(this, addend);
   }
 }
 
 class Bank {
   reduce(source, to) {
     return Money.dollar(10);
+  }
+}
+
+// expression class
+class Sum {
+  constructor(augend, addend) {
+    this.augend = augend;
+    this.addend = addend;
   }
 }
 
