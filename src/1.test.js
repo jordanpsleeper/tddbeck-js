@@ -80,3 +80,7 @@ test("reduce money into different currency", async () => {
   const result = bank.reduce(Money.franc(2), "USD");
   expect(result).toEqual(Money.dollar(1));
 });
+
+test("idenity rate", async () => {
+  expect(new Bank().rate("USD", "USD")).toEqual(1);
+});

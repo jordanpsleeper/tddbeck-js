@@ -40,12 +40,13 @@ class Bank {
   }
 
   addRate(from, to, rate) {
-    this.rates.set(new Pair(from, to), parseInt(rate));
-    console.log(this.rates);
+    this.rates.set(new Pair(from, to).toString(), parseInt(rate));
   }
 
   rate(from, to) {
-    return from === "CHF" && to === "USD" ? 2 : 1;
+    if (from === to) return 1; // if same idenity, rate is 1
+    const rate = this.rates.get(new Pair(from, to).toString());
+    return rate;
   }
 }
 
@@ -75,6 +76,10 @@ class Pair {
 
   hashCode() {
     return 0; // no idea
+  }
+
+  toString() {
+    return `${this.from}${this.to}`;
   }
 }
 
