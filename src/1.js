@@ -32,8 +32,8 @@ class Money {
 }
 
 class Bank {
-  reduce(sum, to) {
-    return sum.reduce(to);
+  reduce(source, to) {
+    return source.reduce(to);
   }
 }
 
