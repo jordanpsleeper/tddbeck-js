@@ -13,17 +13,18 @@ class Money {
     return new Money(amount, "CHF");
   }
 
+  // needs to return expression
   times(multiplier) {
     return new Money(this.amount * multiplier, this.currency);
-  }
-
-  equals(money) {
-    return this.amount === money.amount && this.currency === money.currency;
   }
 
   // needs to return an expression
   plus(addend) {
     return new Sum(this, addend);
+  }
+
+  equals(money) {
+    return this.amount === money.amount && this.currency === money.currency;
   }
 
   reduce(bank, to) {
@@ -61,6 +62,10 @@ class Sum {
     const amount =
       this.augend.reduce(bank, to).amount + this.addend.reduce(bank, to).amount;
     return new Money(amount, to);
+  }
+
+  plus(addend) {
+    return null; // stub out plus
   }
 }
 
