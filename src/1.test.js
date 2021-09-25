@@ -15,11 +15,11 @@
 // compare francs with dollars (done)
 // currency? (done)
 // delete multiplicationFranc (done)
-// $5 + $5 = $10
+// $5 + $5 = $10 (done)
 // return Money from $5 + $5
 // Bank.reduce(Money); (done)
-// reduce Money with conversion
-// Reduce(Bank, string);
+// reduce Money with conversion (done)
+// Reduce(Bank, string) (done)
 
 const { Money, Bank, Sum } = require("./1.js");
 
