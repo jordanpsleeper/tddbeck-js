@@ -20,6 +20,8 @@
 // Bank.reduce(Money); (done)
 // reduce Money with conversion (done)
 // Reduce(Bank, string) (done)
+// Sum.plus
+// Expression.times
 
 const { Money, Bank, Sum } = require("./1.js");
 
