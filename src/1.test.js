@@ -1,5 +1,5 @@
 // notepad
-// $5 + 10 CHF = $10 if rate is 2:1 <--
+// $5 + 10 CHF = $10 if rate is 2:1 <-- done
 // $5 * 2 = $10 (done)
 // make "amount" private (done)
 // dollar side-effects? (done)
@@ -20,7 +20,7 @@
 // Bank.reduce(Money); (done)
 // reduce Money with conversion (done)
 // Reduce(Bank, string) (done)
-// Sum.plus
+// Sum.plus done
 // Expression.times
 
 const { Money, Bank, Sum } = require("./1.js");
