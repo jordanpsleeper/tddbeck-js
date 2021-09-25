@@ -65,7 +65,7 @@ class Sum {
   }
 
   plus(addend) {
-    return null; // stub out plus
+    return new Sum(this, addend);
   }
 }
 
