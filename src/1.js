@@ -29,8 +29,7 @@ class Money {
 
 class Bank {
   reduce(sum, to) {
-    const amount = sum.augend.amount + sum.addend.amount;
-    return new Money(amount, to);
+    return sum.reduce(to);
   }
 }
 
@@ -39,6 +38,11 @@ class Sum {
   constructor(augend, addend) {
     this.augend = augend;
     this.addend = addend;
+  }
+
+  reduce(to) {
+    const amount = this.augend.amount + this.addend.amount;
+    return new Money(amount, to);
   }
 }
 
