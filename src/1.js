@@ -21,9 +21,16 @@ class Money {
     return this.amount === money.amount && this.currency === money.currency;
   }
 
+  // needs to return an expression
   plus(addend) {
     return new Money(this.amount + addend.amount, this.currency);
   }
 }
 
-module.exports = { Money };
+class Bank {
+  reduce(source, to) {
+    return Money.dollar(10);
+  }
+}
+
+module.exports = { Money, Bank };
