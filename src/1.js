@@ -33,7 +33,6 @@ class Money {
 
 class Bank {
   reduce(sum, to) {
-    if (sum instanceof Money) return sum.reduce(to); // if money just return and not reduce
     return sum.reduce(to);
   }
 }

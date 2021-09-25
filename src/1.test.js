@@ -17,7 +17,7 @@
 // delete multiplicationFranc (done)
 // $5 + $5 = $10
 // return Money from $5 + $5
-// Bank.reduce(Money);
+// Bank.reduce(Money); (done)
 
 const { Money, Bank, Sum } = require("./1.js");
 
