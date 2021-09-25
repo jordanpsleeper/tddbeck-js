@@ -33,6 +33,8 @@ class Money {
 }
 
 class Bank {
+  rates = {}; // hashtable
+
   reduce(source, to) {
     return source.reduce(this, to); // can be Money or Sum Expression
   }
