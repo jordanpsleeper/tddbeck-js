@@ -17,7 +17,7 @@
 // delete multiplicationFranc (done)
 // $5 + $5 = $10
 
-const { Money, Bank } = require("./1.js");
+const { Money, Bank, Sum } = require("./1.js");
 
 test("multiplication", async () => {
   const five = Money.dollar(5);
@@ -55,4 +55,11 @@ test("plus returns sum expression", async () => {
   const sum = result;
   expect(five).toEqual(sum.augend);
   expect(five).toEqual(sum.addend);
+});
+
+test("test reduce sum", async () => {
+  const sum = new Sum(Money.dollar(3), Money.dollar(4));
+  const bank = new Bank();
+  const result = bank.reduce(sum, "USD");
+  expect(result).toEqual(Money.dollar(7));
 });

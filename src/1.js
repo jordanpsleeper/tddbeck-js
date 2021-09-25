@@ -28,8 +28,9 @@ class Money {
 }
 
 class Bank {
-  reduce(source, to) {
-    return Money.dollar(10);
+  reduce(sum, to) {
+    const amount = sum.augend.amount + sum.addend.amount;
+    return new Money(amount, to);
   }
 }
 
@@ -41,4 +42,4 @@ class Sum {
   }
 }
 
-module.exports = { Money, Bank };
+module.exports = { Money, Bank, Sum };
