@@ -29,6 +29,7 @@ class Money {
 
 class Bank {
   reduce(sum, to) {
+    if (sum instanceof Money) return sum;
     return sum.reduce(to);
   }
 }

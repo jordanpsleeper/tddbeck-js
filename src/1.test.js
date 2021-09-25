@@ -65,3 +65,9 @@ test("test reduce sum", async () => {
   const result = bank.reduce(sum, "USD");
   expect(result).toEqual(Money.dollar(7));
 });
+
+test("test reduce Money", async () => {
+  const bank = new Bank();
+  const result = bank.reduce(Money.dollar(1), "USD");
+  expect(result).toEqual(Money.dollar(1));
+});
