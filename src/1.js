@@ -27,7 +27,7 @@ class Money {
   }
 
   reduce(bank, to) {
-    const rate = this.currency === "CHF" && to === "USD" ? 2 : 1;
+    const rate = bank.rate(this.currency, to);
     return new Money(this.amount / rate, to);
   }
 }
@@ -56,6 +56,22 @@ class Sum {
   reduce(bank, to) {
     const amount = this.augend.amount + this.addend.amount;
     return new Money(amount, to);
+  }
+}
+
+// private class
+class Pair {
+  constructor(from, to) {
+    this.from = from;
+    this.to = to;
+  }
+
+  equals(pair) {
+    return this.from === pair.from && this.to === pair.to;
+  }
+
+  hashCode() {
+    return 0; // no idea
   }
 }
 
