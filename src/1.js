@@ -25,11 +25,15 @@ class Money {
   plus(addend) {
     return new Sum(this, addend);
   }
+
+  reduce(to) {
+    return this;
+  }
 }
 
 class Bank {
   reduce(sum, to) {
-    if (sum instanceof Money) return sum; // if money just return and not reduce
+    if (sum instanceof Money) return sum.reduce(to); // if money just return and not reduce
     return sum.reduce(to);
   }
 }
