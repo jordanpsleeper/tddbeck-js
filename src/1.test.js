@@ -9,7 +9,7 @@
 // equal null
 // equal object
 // 5 CHF * 2 = 10 CHF (done)
-// dollar/franc duplication
+// dollar/franc duplication (done)
 // common euqal (done)
 // common times (done)
 // compare francs with dollars (done)
