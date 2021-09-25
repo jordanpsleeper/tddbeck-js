@@ -18,6 +18,8 @@
 // $5 + $5 = $10
 // return Money from $5 + $5
 // Bank.reduce(Money); (done)
+// reduce Money with conversion
+// Reduce(Bank, string);
 
 const { Money, Bank, Sum } = require("./1.js");
 
