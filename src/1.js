@@ -33,7 +33,7 @@ class Money {
 
 class Bank {
   reduce(source, to) {
-    return source.reduce(to);
+    return source.reduce(to); // can be Money or Sum Expression
   }
 }
 
