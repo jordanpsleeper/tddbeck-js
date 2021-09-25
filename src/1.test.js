@@ -15,7 +15,7 @@
 // compare francs with dollars (done)
 // currency? (done)
 // delete multiplicationFranc (done)
-// $5 + $5 = $10
+// $5 + $5 = $10 (done)
 
 const { Money, Bank } = require("./1.js");
 
