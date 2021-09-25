@@ -33,14 +33,15 @@ class Money {
 }
 
 class Bank {
-  rates = {}; // hashtable
+  rates = new Map(); // hashtable
 
   reduce(source, to) {
     return source.reduce(this, to); // can be Money or Sum Expression
   }
 
-  addRate() {
-    return null;
+  addRate(from, to, rate) {
+    this.rates.set(new Pair(from, to), parseInt(rate));
+    console.log(this.rates);
   }
 
   rate(from, to) {
